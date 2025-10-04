@@ -20,10 +20,24 @@
 	  exit 1
      fi
 
-     act_file= "$logs_dir/${FILES[$choice]}"
-     archives_file= "$arch_dir/${ARCHDIR[$choice]}"
+     act_file="$logs_dir/${FILES[$choice]}"
+     archives_file="$arch_dir/${ARCHDIR[$choice]}"
 
      if [ ! -f "$act_file" ]; then
-  echo "Log file not found: $act__file" >&2
+  echo "Log file not found: $act_file" >&2
   exit 2
 fi
+
+mkdir -p '$archive_dir' || { echo "Cannot create archive dir: $archive_dir" >&2; exit 3; }
+
+
+ts="$(date '+%F_%T')"
+base="${FILES[$choice]%.log}"
+dest="$archive_dir/${base}_${ts}.log"
+
+echo "Archiving $(basename "$act_file") ..."
+mv "$act_file" "$dest" || { echo "Move failed." >&2; exit 4; }
+
+: > "$act_file" || { echo "Failed to recreate active log: $act_file" >&2; exit 5; }
+
+echo " Successfully archived to $(basename "$dest")"
