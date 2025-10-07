@@ -1,0 +1,36 @@
+
+===== Analysis: 2025-10-07 04:25:27 =====
+Log file: hospital_data/active_logs/water_usage.log
+
+Device Counts:
+
+First entry: 
+Last entry : 
+
+
+===== Analysis: 2025-10-07 04:26:14 =====
+Log file: hospital_data/active_logs/temperature.log
+
+Device Counts:
+
+First entry: 
+Last entry : 
+
+
+===== Analysis: 2025-10-07 04:30:47 =====
+Log file: hospital_data/active_logs/temperature.log
+
+Device Counts:
+
+First entry: 
+Last entry : 
+
+
+===== Analysis: 2025-10-07 04:40:13 =====
+Log file: hospital_data/active_logs/temperature.log
+
+Device Counts:
+
+First entry: 
+Last entry : 
+
