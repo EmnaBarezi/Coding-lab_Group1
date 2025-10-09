@@ -4,7 +4,7 @@
  logs_dir="hospital_data/active_logs"
  arch_dir="hospital_data/archived_logs"
     
-    declare -A FILES=( [1]="heart_rate.log" [2]="temperature.log" [3]="water_usage.log" )
+    declare -A FILES=( [1]="heart_rate_log.log" [2]="temperature_log.log" [3]="water_usage_log.log" )
     declare -A ARCHDIR=( [1]="heart_data_archive" [2]="temp_data_archive" [3]="water_data_archive" )
    
     
