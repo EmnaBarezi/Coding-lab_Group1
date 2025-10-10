@@ -20,9 +20,9 @@ if [[ "$choice" != "1" && "$choice" != "2" && "$choice" != "3" ]]; then
 fi
 
 case "$choice" in
-    1) log_file="hospital_data/active_logs/heart_rate.log" ;;
-    2) log_file="hospital_data/active_logs/temperature.log" ;;
-    3) log_file="hospital_data/active_logs/water_usage.log" ;;
+    1) log_file="hospital_data/active_logs/heart_rate_log.log" ;;
+    2) log_file="hospital_data/active_logs/temperature_log.log" ;;
+    3) log_file="hospital_data/active_logs/water_usage_log.log" ;;
 esac
 
 echo "You selected: $log_file"

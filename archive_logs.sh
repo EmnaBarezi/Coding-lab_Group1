@@ -2,10 +2,11 @@
 
    
  logs_dir="hospital_data/active_logs"
- arch_dir="hospital_data/archived_logs"
+ arch_dir="hospital_data/archived_logs/"
     
+
     declare -A FILES=( [1]="heart_rate.log" [2]="temperature.log" [3]="water_usage.log" )
-    declare -A ARCHDIR=( [1]="heart_data_archive" [2]="temp_data_archive" [3]="water_data_archive" )
+    declare -A ARCHDIR=( [1]="heart_data_archive" [2]="temperature_data_archive" [3]="water_usage_data_archive" )
    
     
    echo "Select log to archive:"
@@ -27,8 +28,6 @@
   echo "Log file not found: $act_file" >&2
   exit 2
 fi
-
-mkdir -p '$archive_dir' || { echo "Cannot create archive dir: $archive_dir" >&2; exit 3; }
 
 
 ts="$(date '+%F_%T')"
