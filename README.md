@@ -34,5 +34,54 @@ Defensive error handling for missing files, bad input, and perms
 
 Simple, portable, dependency-light (POSIX tools + Python 3)
 
+And after this is the
+Repository Structure:
 
+[
+"hospital_data/",
+"├─ active_logs/                    
+"│  ├─ heart_rate.log              
+"│  ├─ temperature.log",
+"│  └─ water_usage.log",
+"├─ archived_logs/                 
+"│  ├─ heart_data_archive/",
+"│  ├─ temperature_data_archive/",
+"│  └─ water_usage_data_archive/",
+"└─ reports/",
+"   └─ analysis_report.txt",
+]
+
+
+Task 1 — Archival (archive_logs.sh)
+
+What it does:
+-Shows a numbered menu to pick a log to rotate.
+
+-Moves the selected active log into its archive folder.
+
+-Renames it precisely: <type>_YYYY-MM-DD_HH:MM:SS.log.
+
+-Recreates an empty active log so Python simulators keep writing seamlessly.
+
+-Validates inputs and file presence, creates directories if missing, and prints clear status messages.
+
+Task 2 — Analysis (analyze_logs.sh)
+
+What it does:
+
+-Presents a menu of logs to analyze.
+
+-Counts occurrences per device (e.g., HRM-1, TEMP-2, FLOW-1).
+
+-Optionally extracts first and last timestamps (bonus).
+
+-Appends a formatted section to reports/analysis_report.txt including:
+
+-Run timestamp
+
+-Source log path
+
+-Count per device (sorted)
+
+-First/Last entry if available
 
