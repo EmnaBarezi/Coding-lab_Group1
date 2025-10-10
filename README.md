@@ -85,3 +85,36 @@ What it does:
 
 -First/Last entry if available
 
+EMNA’S PART
+
+Data & File Naming Conventions
+
+Active logs
+
+
+hospital_data/active_logs/heart_rate.log
+
+
+hospital_data/active_logs/temperature.log
+
+
+hospital_data/active_logs/water_usage.log
+
+
+Archived logs
+
+
+hospital_data/archived_logs/heart_data_archive/heart_rate_YYYY-MM-DD_HH:MM:SS.log
+
+
+hospital_data/archived_logs/temp_data_archive/temperature_YYYY-MM-DD_HH:MM:SS.log
+
+
+hospital_data/archived_logs/water_data_archive/water_usage_YYYY-MM-DD_HH:MM:SS.log
+
+
+Reports
+
+
+reports/analysis_report.txt (append-only history)
+
